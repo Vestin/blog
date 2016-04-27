@@ -60,6 +60,8 @@ HTTP 本质来讲是RPC调用的一种实现方式。换种方式说，**RPC客�
 * 调用简单,直接
 * 开发方便
 
+> HTTP（HyperText Transfer Protocol）是应用层通信协议, HTTP 的缺点是协议头较重，一般请求到具体服务器的链路较长，可能会有 DNS 解析、Nginx 代理等。
+
 #### RPC 框架的优点
 * RPC框架一般使用长链接，不必每次通信都要3次握手，减少网络开销
 * RPC框架一般都有注册中心，有丰富的监控管理
@@ -78,3 +80,4 @@ REST 是定义http接口调用的一种方式，REST 也可以说是RPC调用的
 * [为什么需要RPC，而不是简单的HTTP接口 (oschina)](http://www.oschina.net/question/271044_2155059?sort=default&p=1#answers)
 * [RPC调用框架比较分析](http://www.tuicool.com/articles/jUj2miJ)
 * [RPC框架几行代码就够了](http://javatar.iteye.com/blog/1123915)
+* [支撑微博千亿调用的轻量级RPC框架：Motan](http://h2ex.com/820)
