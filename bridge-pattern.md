@@ -12,6 +12,9 @@ description:
 ### 桥接模式(bridge pattern)
 将**抽象**和**实现**解耦，使得二者可以**独立地变化**。
 一般用在两个或多个维度（抽象）的变化。
+
+<!--more-->
+
 ![bridge](http://7xqgk3.com1.z0.glb.clouddn.com/image/design-pattern/bridge-pattern.jpg)
 
 例如：

@@ -14,9 +14,9 @@ description: detial of decorator pattern
 > **装饰模式** 动态的将责任附加到对象上。
 
 装饰模式是在不必改变原类文件和使用继承的情况下，动态的扩展一个对象的功能。它是通过创建一个包装对象，页就是装饰来包裹真实的对象。
+<!--more-->
 
 ![Decorator Pattern](http://7xqgk3.com1.z0.glb.clouddn.com/image/design-pattern/decorator-pattern.png)
-<!--more-->
 > Decorator Pattern UMP map **[More Detail](http://www.cnblogs.com/java-my-life/archive/2012/04/20/2455726.html)**
 
 * 装饰模式优点
@@ -39,7 +39,7 @@ abstract class Beverage{
 class Coffee extends Beverage{
     public function __construct(){
         $this->_name = 'Coffee';
-    } 
+    }
     public function Cost(){
         return 1.00;
     }
@@ -48,10 +48,10 @@ class Coffee extends Beverage{
 class CondimentDecorator extends Beverage{
     public function __construct(){
         $this->_name = 'Condiment';
-    } 
+    }
     public function Cost(){
         return 0.1;
-    } 
+    }
 }
 
 class Milk extends CondimentDecorator{

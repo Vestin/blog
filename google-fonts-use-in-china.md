@@ -16,7 +16,7 @@ description: google fonts 离线使用
 * 缺点：目标用户包含国外的开发者，不清楚国外用户的加载速度
 
 解决方案2：提供另外一种解决方案，可以自主决定资源下载源，自主配置cdn等服务。
-
+<!--more-->
 1. 在[google fonts 官网](https://www.google.com/fonts/)上选择字体并获取css链接，如下
 ```
 <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
@@ -28,8 +28,8 @@ description: google fonts 离线使用
   font-family: 'Oswald';
   font-style: normal;
   font-weight: 400;
-  src: local('Oswald Regular'), 
-       local('Oswald-Regular'), 
+  src: local('Oswald Regular'),
+       local('Oswald-Regular'),
        url(https://fonts.gstatic.com/s/oswald/v10/pEobIV_lL25TKBpqVI_a2w.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }

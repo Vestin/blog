@@ -15,6 +15,8 @@ description:
 ## RPC是什么
 [PRC(Remote Procedure Call 远程过程调用)](https://en.wikipedia.org/wiki/Remote_procedure_call) 是**本地计算机程序**通过**网络**调用**远程计算机服务**。
 
+<!--more-->
+
 ## 为什么要用RPC
 1. 可以做到分布式，现代化的微服务
 2. 部署灵活
@@ -22,8 +24,6 @@ description:
 4. 扩展性强
 
 RPC的目的是让你在本地调用远程的方法，而对你来说这个调用是透明的，你并不知道这个调用的方法是部署哪里。通过RPC能解耦服务，这才是使用RPC的真正目的。
-
-<!--more-->
 
 ## RPC结构
 client-server 结构，调用方为client，远程被调用方为server。

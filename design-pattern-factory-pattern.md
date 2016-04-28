@@ -16,8 +16,9 @@ description: detail of factory pattern
 
 简单工厂模式是由一个工厂对象决定创建出哪一种产品类的实例。简单工厂模式是工厂模式家族中最简单实用的模式，可以理解为是不同工厂模式的一个特殊实现。
 
-![Static Factory Pattern](http://7xqgk3.com1.z0.glb.clouddn.com/image/design-pattern/static-factory-pattern.jpg)
 <!--more-->
+
+![Static Factory Pattern](http://7xqgk3.com1.z0.glb.clouddn.com/image/design-pattern/static-factory-pattern.jpg)
 > Static Factory Pattern UMP map
 
 角色分工：
@@ -27,7 +28,7 @@ description: detail of factory pattern
     * 简单工厂模式所创建的所有对象的父类，它负责描述所有实例所共有的公共接口。
 * 具体产品（Concrete Product）角色
     * 是简单工厂模式的创建目标，所有创建的对象都是充当这个角色的某个具体类的实例。
-#### 简单工厂模式的优缺点分析： 
+#### 简单工厂模式的优缺点分析：
 
 **优点：**
 
@@ -40,4 +41,3 @@ description: detail of factory pattern
 *违反了单一职责原则(SRP),开放-封闭原则(OCP)*
 
 由于工厂类集中了所有实例的创建逻辑，这就直接导致一旦这个工厂出了问题，所有的客户端都会受到牵连；而且由于简单工厂模式的产品室基于一个共同的抽象类或者接口，这样一来，但产品的种类增加的时候，即有不同的产品接口或者抽象类的时候，工厂类就需要判断何时创建何种种类的产品，这就和创建何种种类产品的产品相互混淆在了一起，违背了单一职责，导致系统丧失灵活性和可维护性。而且更重要的是，简单工厂模式违背了“开放封闭原则”，就是违背了“系统对扩展开放，对修改关闭”的原则，因为当我新增加一个产品的时候必须修改工厂类，相应的工厂类就需要重新编译一遍。
-

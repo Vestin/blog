@@ -17,6 +17,7 @@ description: atom hand book
     * git clone https://github.com/atom/vim-mode.git
     * cd vim-mode
     * npm install
+<!--more-->
 * 手动安装方法二：
     * apm install atom/vim-mode
 
