@@ -33,5 +33,7 @@ categories:
   - [read more](http://www.tuicool.com/articles/2ma2aa)
 * 单一职责原则（Single responsibility principle）（一个类应该只有一个引起变化的原因）
 
-//TODO
-Some pattern goes here
+### 依赖倒置原则
+依赖倒置原则（Dependence Inversion Principle）是程序要依赖于抽象接口，不要依赖于具体实现。简单的说就是要求对抽象进行编程，不要对实现进行编程，这样就降低了客户与实现模块间的耦合。
+1. 高层次的模块不应该依赖于低层次的模块，他们都应该依赖于抽象。
+2. 抽象不应该依赖于具体实现，具体实现应该依赖于抽象。
