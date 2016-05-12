@@ -83,11 +83,11 @@ Class SimpleCarFactory{
 }
 
 //test
-$Jeep = SimpleCarFactory::createCar(1);
-$Jeep->run();
+$car = SimpleCarFactory::createCar(1);
+$car->run(); //Jeep
 
-$BMW = SimpleCarFactory::createCar(2);
-$BMW->run();
+$car = SimpleCarFactory::createCar(2);
+$car->run(); //BMW
 ```
 
 ## 工厂模式
@@ -138,11 +138,11 @@ Class BMWCarFactory{
 //Client
 $factory = new JeepCarFactory;
 $car = $factory->createCar();
-$car->run();
+$car->run();    //jeep run...
 
 $factory = new BMWCarFactory;
 $car = $factory->createCar();
-$car->run();
+$car->run();    //bmw run...
 ```
 
 ## 抽象工厂
