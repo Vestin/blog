@@ -1,8 +1,8 @@
 ---
-title: sass 2 css gulp workflow
+title: sass 2 css gulp workflow,minify html,minify css
 tags:
   - tools
-description: '前端基础工作流：sass自动化编辑成css。sass 完整安装过程，配合nodejs ,gulp 工具，实现自动化编译成css。'
+description: '前端基础工作流：sass自动化编辑成css。sass 完整安装过程，配合nodejs ,gulp 工具，实现自动化编译成css。html压缩，css压缩流'
 date: 2016-05-04 19:34:59
 ---
 
@@ -15,6 +15,11 @@ If you have a directory with many Sass files, you can also tell Sass to watch th
 如果想更顺手的完成更复杂的编译，就需要使用nodejs,gulp 工具进行处理。
 
 [TOC]
+
+用到的Gulp插件
+* [gulp-sass](https;//www.npmjs.com/package/gulp-sass)
+* [gulp-clean-css](https://www.npmjs.com/package/gulp-clean-css/)
+* [gulp-htmlmin](https://www.npmjs.com/package/gulp-htmlmin/)
 
 ### Sass安装
 环境ubuntu 16.04
@@ -50,7 +55,7 @@ gulp 安装参考[gulp入门指南](http://www.gulpjs.com.cn/docs/getting-starte
 简易步骤：
 在项目更目录执行
 `npm install --save-dev gulp`
-**安装gulp-sass插件,详细说明*[gulp-sass](https://www.npmjs.com/package/gulp-sass/)
+**安装gulp-sass插件,详细说明**[gulp-sass](https://www.npmjs.com/package/gulp-sass/)
 `npm install gulp-sass`
 
 ### sass 转 css 操作流
@@ -88,3 +93,31 @@ gulp.task('default',function(){
 [19:05:18] Finished 'default' after 20 ms
 ```
 打开编辑器编辑scss下test.scss文件，保存，查看css下test.css文件，已经编译好了。
+
+### css 压缩
+安装 `npm i gulp-clean-css --save-dev`
+```
+var gulp = require('gulp');
+var cleanCss = require('gulp-clean-css');
+
+gulp.task('minify-css',function(){
+    gulp.src('./css/*.css')
+                .pipe(cleanCSS())
+                .pipe(gulp.dest('./mincss/'));
+    })
+```
+使用 `gulp minify-css`
+
+### html 压缩
+安装 `npm i gulp-htmlmin --save-dev`
+```
+var gulp = require('gulp');
+var htmlmin = require('gulp-htmlmin');
+
+gulp.task('htmlmin',function(){
+    gulp.src('./*.html')
+        .pipe(htmlmin({collapseWhitespace:true}))
+        .pipe(gulp.dest('./minhtml/'));
+    })
+```
+使用 `gulp htmlmin`
